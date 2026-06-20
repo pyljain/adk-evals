@@ -1,0 +1,388 @@
+{
+  "eval_set_result_id": "agent_greeting_local_evalset_1781945532.841373",
+  "eval_set_result_name": "agent_greeting_local_evalset_1781945532.841373",
+  "eval_set_id": "greeting_local_evalset",
+  "eval_case_results": [
+    {
+      "eval_set_file": "greeting_local_evalset",
+      "eval_set_id": "greeting_local_evalset",
+      "eval_id": "greeting_by_name",
+      "final_eval_status": 1,
+      "eval_metric_results": null,
+      "overall_eval_metric_results": [
+        {
+          "metric_name": "tool_trajectory_avg_score",
+          "threshold": 1.0,
+          "criterion": {
+            "threshold": 1.0,
+            "include_intermediate_responses_in_final": false
+          },
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "final_response_match_v2",
+          "threshold": 0.7,
+          "criterion": {
+            "threshold": 0.7,
+            "include_intermediate_responses_in_final": false,
+            "judge_model_options": {
+              "judge_model": "claude-opus-4-8",
+              "num_samples": 3
+            }
+          },
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        }
+      ],
+      "eval_metric_result_per_invocation": [
+        {
+          "actual_invocation": {
+            "invocation_id": "e-8e62bce6-ccb2-4660-bc01-d3f903a0914d",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Hello, my name is Priya.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Hello, Priya! It's wonderful to meet you. 😊 Welcome! How are you doing today, and what can I help you with?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": []
+            },
+            "creation_timestamp": 1781945492.517355,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {
+                "greeting_agent": {
+                  "name": "greeting_agent",
+                  "instructions": "You are a helpful assistant. Greet the user warmly.\n\nYou are an agent. Your internal name is \"greeting_agent\".",
+                  "tool_declarations": []
+                }
+              }
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "inv-1",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Hello, my name is Priya.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Hi Priya, it's lovely to meet you! What can I do for you today?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": null,
+            "creation_timestamp": 0.0,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "threshold": 1.0,
+              "criterion": {
+                "threshold": 1.0,
+                "include_intermediate_responses_in_final": false
+              },
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "final_response_match_v2",
+              "threshold": 0.7,
+              "criterion": {
+                "threshold": 0.7,
+                "include_intermediate_responses_in_final": false,
+                "judge_model_options": {
+                  "judge_model": "claude-opus-4-8",
+                  "num_samples": 3
+                }
+              },
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            }
+          ]
+        }
+      ],
+      "session_id": "___eval___session___7aee6182-7c8c-43c4-a085-ebdace8b56c6",
+      "session_details": null,
+      "user_id": "test_user_id"
+    },
+    {
+      "eval_set_file": "greeting_local_evalset",
+      "eval_set_id": "greeting_local_evalset",
+      "eval_id": "warm_greeting",
+      "final_eval_status": 1,
+      "eval_metric_results": null,
+      "overall_eval_metric_results": [
+        {
+          "metric_name": "tool_trajectory_avg_score",
+          "threshold": 1.0,
+          "criterion": {
+            "threshold": 1.0,
+            "include_intermediate_responses_in_final": false
+          },
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "final_response_match_v2",
+          "threshold": 0.7,
+          "criterion": {
+            "threshold": 0.7,
+            "include_intermediate_responses_in_final": false,
+            "judge_model_options": {
+              "judge_model": "claude-opus-4-8",
+              "num_samples": 3
+            }
+          },
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        }
+      ],
+      "eval_metric_result_per_invocation": [
+        {
+          "actual_invocation": {
+            "invocation_id": "e-80f0f7ff-c308-4e16-a404-13825bb1ae54",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Hi there!",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Hello, and welcome! 🌟 It's wonderful to meet you. How are you doing today? Is there anything I can help you with, or would you just like to chat? I'm happy to assist with whatever you need!",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": []
+            },
+            "creation_timestamp": 1781945492.6581068,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {
+                "greeting_agent": {
+                  "name": "greeting_agent",
+                  "instructions": "You are a helpful assistant. Greet the user warmly.\n\nYou are an agent. Your internal name is \"greeting_agent\".",
+                  "tool_declarations": []
+                }
+              }
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "inv-1",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Hi there!",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Hello! It's wonderful to meet you. How can I help you today?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": null,
+            "creation_timestamp": 0.0,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "threshold": 1.0,
+              "criterion": {
+                "threshold": 1.0,
+                "include_intermediate_responses_in_final": false
+              },
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "final_response_match_v2",
+              "threshold": 0.7,
+              "criterion": {
+                "threshold": 0.7,
+                "include_intermediate_responses_in_final": false,
+                "judge_model_options": {
+                  "judge_model": "claude-opus-4-8",
+                  "num_samples": 3
+                }
+              },
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            }
+          ]
+        }
+      ],
+      "session_id": "___eval___session___e71946e7-8c71-4704-891d-ce9cd6aea16f",
+      "session_details": null,
+      "user_id": "test_user_id"
+    }
+  ],
+  "creation_timestamp": 1781945532.841373
+}

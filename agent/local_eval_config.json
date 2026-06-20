@@ -1,0 +1,42 @@
+{
+  "criteria": {
+    "tool_trajectory_avg_score": 1.0,
+    "final_response_match_v2": {
+      "threshold": 0.7,
+      "judge_model_options": {
+        "judge_model": "claude-opus-4-8",
+        "num_samples": 3
+      }
+    },
+    "response_is_concise": 1.0,
+    "rubric_based_final_response_quality_v1": {
+      "threshold": 0.7,
+      "judge_model_options": {
+        "judge_model": "claude-opus-4-8",
+        "num_samples": 3
+      },
+      "rubrics": [
+        {
+          "rubric_id": "greets_warmly",
+          "rubric_content": {
+            "text_property": "The response greets the user in a warm, friendly tone."
+          }
+        },
+        {
+          "rubric_id": "no_overpromising",
+          "rubric_content": {
+            "text_property": "The response does not promise capabilities the agent does not have."
+          }
+        }
+      ]
+    }
+  },
+  "custom_metrics": {
+    "response_is_concise": {
+      "code_config": {
+        "name": "agent.custom_metrics.response_is_concise"
+      },
+      "description": "Final response is at most 200 characters."
+    }
+  }
+}

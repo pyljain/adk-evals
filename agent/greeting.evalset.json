@@ -1,0 +1,39 @@
+{
+  "eval_set_id": "greeting_local_evalset",
+  "name": "Greeting agent — local eval set",
+  "description": "Example cases for the greeting agent, scored locally with a Claude LLM-as-judge (final_response_match_v2) plus deterministic tool-trajectory checks.",
+  "eval_cases": [
+    {
+      "eval_id": "warm_greeting",
+      "conversation": [
+        {
+          "invocation_id": "inv-1",
+          "user_content": {
+            "role": "user",
+            "parts": [{ "text": "Hi there!" }]
+          },
+          "final_response": {
+            "role": "model",
+            "parts": [{ "text": "Hello! It's wonderful to meet you. How can I help you today?" }]
+          }
+        }
+      ]
+    },
+    {
+      "eval_id": "greeting_by_name",
+      "conversation": [
+        {
+          "invocation_id": "inv-1",
+          "user_content": {
+            "role": "user",
+            "parts": [{ "text": "Hello, my name is Priya." }]
+          },
+          "final_response": {
+            "role": "model",
+            "parts": [{ "text": "Hi Priya, it's lovely to meet you! What can I do for you today?" }]
+          }
+        }
+      ]
+    }
+  ]
+}
