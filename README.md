@@ -80,9 +80,28 @@ export ANTHROPIC_API_KEY=sk-ant-...
 ANTHROPIC_API_KEY=sk-ant-...
 ```
 
-> Using the **company AI gateway** instead of api.anthropic.com directly? Point the SDK at
-> it with `ANTHROPIC_BASE_URL=https://<your-gateway>/...` (and whatever auth the gateway
-> expects). All agent + judge traffic then flows through the gateway — still no Vertex.
+> Using the **company AI gateway** instead of api.anthropic.com directly? See the next
+> section — there's a built-in toggle, and [`GATEWAY.md`](./GATEWAY.md) covers every option.
+
+### Using the enterprise AI gateway
+
+To route the agent **and** the eval judge through the gateway (no gcloud, still no Vertex),
+flip the `AI_GATEWAY` toggle and provide the gateway config:
+
+```bash
+export AI_GATEWAY=1
+export AI_GATEWAY_URL="https://gw.corp/anthropic"          # gateway's Anthropic-format path
+export AI_GATEWAY_KEY="<gateway-token>"
+export AI_GATEWAY_HEADERS="x-tenant=team-x,x-project=evals" # optional custom headers
+```
+
+With `AI_GATEWAY=1`, `agent/agent.py` loads [`agent/gateway_models.py`](./agent/gateway_models.py),
+which registers gateway-backed clients so bare `claude-*` (and `openai/*`) model strings —
+including the eval judge — resolve to a client pointed at your gateway, with custom headers
+if needed. Unset `AI_GATEWAY` to go back to the direct Anthropic API.
+
+For OpenAI-compatible gateways and other models (gpt-*, Llama, …), and the full rationale,
+see **[`GATEWAY.md`](./GATEWAY.md)**.
 
 ---
 
